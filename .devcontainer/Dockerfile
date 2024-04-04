@@ -16,6 +16,7 @@ RUN apt update && apt install -y \
     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash \
     && apt install -y nodejs \
     && npm install -g typescript@5.4.3
+RUN npm install -g vercel@latest
 
 # ==============================
 # 開発用ユーザーを設定
