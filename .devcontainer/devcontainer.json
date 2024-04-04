@@ -1,0 +1,18 @@
+{
+    "name": "vercel-tutorial", // 名前
+    "dockerComposeFile": "docker-compose.yaml", // .devcontainerディレクトリ内のdocker-compose.yamlを指定
+    "service": "dev",                                     // 接続するコンテナサービス
+    "remoteUser": "tcybar",                               // 接続ユーザー
+    "workspaceFolder": "/home/tcybar/app",                // 作業ディレクトリ
+    // コンテナ作成後に実行するコマンド
+    // NOTE: node_modulesディレクトリの所有者をnodeユーザーに変更(変更しないとnpm installが権限エラーで失敗するため)
+    "postCreateCommand": "sudo chown tcybar:tcybar node_modules",  
+    "features": {},
+    "customizations": {
+      "vscode": {
+        "extensions": [                         // vscodeの拡張機能
+          "github.copilot"                      // GitHub Copilot機能を使えるようにする
+        ]
+      }
+    }
+  }
