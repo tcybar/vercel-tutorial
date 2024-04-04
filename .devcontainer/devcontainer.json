@@ -6,7 +6,7 @@
     "workspaceFolder": "/home/tcybar/app",                // 作業ディレクトリ
     // コンテナ作成後に実行するコマンド
     // NOTE: node_modulesディレクトリの所有者をnodeユーザーに変更(変更しないとnpm installが権限エラーで失敗するため)
-    "postCreateCommand": "sudo chown tcybar:tcybar node_modules",  
+    "postCreateCommand": "sudo chown tcybar:tcybar node_modules && npm install",  
     "features": {},
     "customizations": {
       "vscode": {
